@@ -23,5 +23,19 @@ client.on('message', message => {
 		message.reply('System active. Legend-Turbo-V1 is running.');
 	}
 });
+// Menu Command
+client.on('message', message => {
+	if(message.body === '.menu') {
+		message.reply(`
+🌐 *LEGEND-TURBO-V1* 🌐
+
+*Commands:*
+📌 *.test* - Check Status
+📌 *.ping* - Speed Test
+📌 *.info* - Script Details
+
+_Status: Online_`);
+	}
+});
 
 client.initialize();
